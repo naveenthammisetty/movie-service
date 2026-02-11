@@ -20,7 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Build and Publish Docker Image
-        run: mvn -B clean spring-boot:build-image
+        run: mvn clean spring-boot:build-image
         env:
           DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
           DOCKERHUB_PWD: ${{ secrets.DOCKERHUB_PWD }}
